@@ -1,0 +1,436 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600&family=Slabo+27px&display=swap');
+
+/* Checked line 2- 6/6 */
+* {
+  font-family: 'Slabo 27px', serif;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  outline: none;
+}
+
+/* Checked line 12- 1/1 */
+html {
+  font-size: 62.5%;
+}
+
+/* Checked line 17 6/6 */
+:root {
+  --main-bg-color: #2e2e2e;
+  --primary-color: #524d4d;
+  --secondary-color: #777171;
+  --text-color: #9c9393;
+  --hover-text-color: #bdb8b8;
+  --active-icon-color: #2ae78c;
+}
+
+/* Checked line 27 9/9 */
+.sidebar {
+  box-sizing: border-box;
+  background-color: var(--main-bg-color);
+  height: 100vh;
+  width: 15vw;
+  position: fixed;
+  left: -15vw;
+  padding: 1.5rem 1rem;
+  z-index: 100;
+  transition: left 0.2s;
+}
+
+/* Checked line 40 1/1 */
+.change .sidebar {
+  left: 0;
+}
+
+/* Checked line 45  10/10 */
+.hamburger-menu {
+  background-color: var(--main-bg-color);
+  box-sizing: border-box;
+  border-bottom-right-radius: 1rem;
+  height: 3.5rem;
+  width: 3.5rem;
+  position: absolute;
+  right: -3.5rem;
+  top: 0;
+  padding: 0.5rem;
+  transition: right 0.3s 0.3s;
+}
+
+/* Checked line 59 1/1 */
+.change .hamburger-menu {
+  right: 0;
+}
+
+/* Checked line 64 6/6*/
+.line {
+  background-color: var(--secondary-color);
+  height: 0.3rem;
+  width: 2.5rem;
+  position: absolute;
+  transform-origin: left;
+  transition: transform 0.3s, top 0.3s 0.3s, opacity 0.2s;
+}
+
+/* Checked line 74 1/1 */
+.line-1 {
+  top: 1.2rem;
+}
+
+/* Checked line 81 1/1 */
+.line-2 {
+  top: 1.8rem;
+}
+
+/* Checked line 84 1/1 */
+.line-3 {
+  top: 2.4rem;
+}
+
+/* Checked line 89 3/3 */
+.change .line-1 {
+  top: 2.4rem;
+  transform: rotate(-40deg) translateY(0.3rem);
+  transition: top 0.3s, transform 0.3s 0.3s;
+}
+
+/* Checked line 96 1/1 */
+.change .line-2 {
+  opacity: 0;
+}
+
+/* Checked line 101 3/3 */
+.change .line-3 {
+  top: 1.2rem;
+  transform: rotate(40deg) translateY(-0.3rem);
+  transition: top 0.3s, transform 0.3s 0.3s;
+}
+
+/* Checked line 108 1/1 */
+.card {
+  display: flex;
+}
+
+/* Checked line 112 2/2 */
+.prof-img {
+  width: 5rem;
+  border-radius: 0.5rem;
+}
+
+/* Checked line 121 4/4 */
+.card-body {
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+/* Checked line 127 4/4 */
+.card-title {
+  font-size: 2rem;
+  margin-right: 3rem;
+  color: var(--text-color);
+  letter-spacing: 0.1rem;
+}
+
+/* Checked line 135 2/2 */
+.card-subtitle {
+  font-size: 1.8rem;
+  color: var(--secondary-color);
+}
+
+/* Checked line 141 3/3 */
+.search-form {
+  margin: 2rem 0 1rem 0;
+  display: flex;
+  align-items: center;
+}
+
+/* Checked line 148 9/9 */
+.search-input {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  height: 4rem;
+  width: 100%;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0 1rem;
+  font-size: 1.6rem;
+  letter-spacing: 0.1rem;
+}
+
+/* Checked line 161 3/3 */
+.search-btn {
+  background-color: transparent;
+  border: none;
+  transform: translateX(-150%);
+}
+
+/* Checked line 168 2/2 */
+.search-btn i {
+  color: var(--secondary-color);
+  font-size: 2rem;
+}
+
+/* Checked line 174 1/1 */
+.nav-list {
+  margin-top: 3rem;
+}
+
+/* Checked line 179 1/1 */
+.nav-item {
+  margin: 2rem 0;
+}
+
+/* Checked line 184 4/4 */
+.nav-link {
+  color: var(--text-color);
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+/* Checked line 193 3/3 */
+.nav-link-text {
+  font-size: 1.8rem;
+  padding-left: 1rem;
+  flex-grow: 1;
+}
+
+/* Checked line 208 9/9 */
+.nav-link i:first-child {
+  background-color: var(--primary-color);
+  height: 2rem;
+  width: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.2rem;
+  border-radius: 0.3rem;
+  transition: color 0.2s;
+}
+
+/* Checked line 221 1/1 */
+.nav-link:hover i:first-child {
+  color: var(--active-icon-color);
+}
+
+/* Checked line 226 1/1 */
+.change.nav-link i:first-child {
+  color: var(--active-icon-color);
+}
+
+/* Checked line 231 3/3 */
+.nav-link i:last-child {
+  margin-right: 2.5rem;
+  font-size: 1.6rem;
+  transition: transform 0.5s;
+}
+
+/* Checked line 238 5/5 */
+.sub-nav-list {
+  margin-left: auto;
+  width: 90%;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s;
+}
+
+/* Checked line 247 1/1 */
+.change.sub-nav-list {
+  max-height: 10rem;
+}
+
+/* Checked line 252 1/1 */
+.change > i:last-child {
+  transform: rotate(90deg);
+}
+
+/* checked line 257 1/1 */
+.sub-nav-item {
+  margin: 0.5rem 0;
+} 
+
+/* Checked line 262 2/2 */
+.sub-nav-link {
+  color: var(--text-color);
+  font-size: 1.5rem;
+  transition: color 0.2s;
+}
+
+/* Checked line 269 1/1 */
+.sub-nav-link:hover {
+  color: var(--hover-text-color);
+}
+
+/* Checked line 274 3/3 */
+.sub-nav-link i {
+  margin-right: 00.5rem;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+
+/* Checked line 281 1/1 */
+.sub-nav-link:hover {
+  color: var(--active-icon-color);
+}
+
+/* Checked line 286 8/8 */
+.bottom-list {
+  background-color: var(--primary-color);
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  padding: 0.5rem 0;
+  display: flex;
+  justify-content: space-around;
+  transform: translateX(-1rem);
+}
+
+/* Checked line 298 1/1 */
+.bottom-list-link {
+  position: relative;
+}
+
+/* Checked line 303 3/3 */
+.bottom-list-link i {
+  color: var(--secondary-color);
+  font-size: 1.6rem;
+  transition: color 0.3s;
+}
+
+/* Checked line 310 1/1 */
+.bottom-list-link:hover i {
+  color: var(--active-icon-color);
+}
+
+/* Checked line 315 13/13 */
+.bottom-list-link span {
+   font-family: 'Roboto Slab', serif;
+   color: #fff;
+   font-weight: 600;
+   font-size: 1rem;
+   position: absolute;
+   top: -100%;
+   right: -50%;
+   height: 1.4rem;
+   width: 1.4rem;
+   border-radius: 50%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+/* Checked line 332 1/1 */
+.bottom-list-item:nth-child(1) span {
+  background-color: #cf8a12;
+}
+
+/* Checked line 337 1/1 */
+.bottom-list-item:nth-child(2) span {
+  background-color: #cf2512;
+}
+
+/* Checked line 342 1/1 */
+.bottom-list-item:nth-child(3) span {
+  background-color: #e6e92d;
+}
+
+/* Checked line 347 4/4 */
+.main-section {
+  position: relative;
+  width: 100vw;
+  left: 0;
+  transition: all 0.2s;
+}
+
+/* Checked line 355 2/2 */
+.change .main-section {
+  left: 15vw;
+  width: 85vw;
+}
+
+/* Checked line 361 4/4 */
+.header {
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.5)
+  ), url(images/bg.jpeg) center no-repeat; background-size: cover;
+  height: 100vh;
+  width: inherit;
+}
+
+/* Checked line 340 8/7 */
+.heading {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12rem;
+  color: rgb(59, 153, 65);
+  letter-spacing: 1rem;
+  text-shadow: 0px 3px 0px rgb(30, 85, 34),
+               0px 14px 10px rgba(0,0,0,0.15),
+               0px 24px 2px rgba(0,0,0,0.1),
+               0px 34px 30px rgba(0,0,0,0.1);
+
+} 
+
+/* MEDIA QUERIES */
+@media (max-width: 1500px) {
+  .sidebar {
+    width: 20vw;
+    left: -20vw;
+  }
+  .change .main-section {
+    left: 20vw;
+    width: 80vw;
+  }
+}
+
+@media (max-width: 900px) {
+  .sidebar {
+    width: 30vw;
+    left: -30vw;
+  }
+  .change .main-section {
+    width: 70vw;
+    left: 30vw;
+  }
+  .heading {
+    font-size: 10rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .sidebar {
+    width: 50vw;
+    left: -50vw;
+  }
+  .change .main-section {
+    width: 50vw;
+    left: 50vw;
+  }
+  .heading {
+    display: none;
+  }
+}
+
+@media (max-width: 400px) {
+  .sidebar {
+    width: 100vw;
+    left: -100vw;
+  }
+  .change .main-section {
+    width: 0;
+    left: 100vw;
+  }
+  .heading {
+    display: none;
+  }
+}
+
+
+
+
+
